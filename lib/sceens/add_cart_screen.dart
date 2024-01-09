@@ -1,7 +1,6 @@
-import 'package:amazone/sceens/buyAgain_screen.dart';
-import 'package:amazone/sceens/home_screen.dart';
-import 'package:amazone/sceens/more_screen.dart';
-import 'package:amazone/sceens/user_screen.dart';
+
+import 'package:amazone/botton_Nav_Bar.dart';
+
 import 'package:flutter/material.dart';
 
 class AddCart extends StatelessWidget {
@@ -10,89 +9,14 @@ class AddCart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomAppBar(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-        
-            IconButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => HomeScreen()));
-                },
-                icon: Icon(Icons.home)),
-          
-            IconButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => UserScreen()));
-                },
-                icon: Icon(Icons.person)),
-           
-            IconButton(onPressed: () {}, icon: Icon(Icons.add_shopping_cart)),
-           
-            IconButton(onPressed: () { Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(builder: (context) => MoreScreen()));}, icon: Icon(Icons.more_horiz_rounded)),
-          ],
-        ),
-      ),
+      bottomNavigationBar:bottomBar(),
       body: SafeArea(
-        child: Column(
+        child: ListView(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(
-                top: 5,
-              ),
-              child: Container(
-                color: Color.fromARGB(255, 143, 201, 248),
-                height: 60,
-                child: TextField(
-                  cursorWidth: 350,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    fillColor: Colors.white,
-                    hintText: 'Search Amazone',
-                    hintStyle: TextStyle(
-                      fontSize: 15,
-                    ),
-                    labelStyle: TextStyle(color: Colors.black),
-                    focusColor: Colors.white,
-                    suffixIcon: Icon(
-                      Icons.search,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
-            ),
             Column(
               children: [
                 Container(
-                  height: 30,
-                  color: Color.fromARGB(255, 143, 201, 248),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      TextButton(
-                        onPressed: () {},
-                        child: Text('Cart'),
-                      ),
-                      TextButton(
-                        onPressed: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => BuyAgainScreen()));
-                        },
-                        child: Text('Buy Again'),
-                      ),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text('Keep Shoping For'),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  color: const Color.fromARGB(255, 160, 212, 255),
+                  color: Color.fromARGB(255, 165, 220, 228),
                   height: 50,
                   child: Row(
                     children: [

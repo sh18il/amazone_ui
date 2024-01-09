@@ -1,7 +1,6 @@
+import 'package:amazone/botton_Nav_Bar.dart';
 import 'package:amazone/sceens/Acount_info.dart';
-import 'package:amazone/sceens/add_cart_screen.dart';
-import 'package:amazone/sceens/home_screen.dart';
-import 'package:amazone/sceens/more_screen.dart';
+
 import 'package:flutter/material.dart';
 
 class UserScreen extends StatelessWidget {
@@ -11,7 +10,7 @@ class UserScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 143, 201, 248),
+        backgroundColor: Color.fromARGB(255, 145, 213, 222),
         leading: Image.network(
           'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/905px-Amazon_logo.svg.png',
         ),
@@ -20,36 +19,7 @@ class UserScreen extends StatelessWidget {
           IconButton(onPressed: () {}, icon: Icon(Icons.search))
         ],
       ),
-      bottomNavigationBar: BottomAppBar(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: Icon(Icons.home)),
-            IconButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => UserScreen()));
-                },
-                icon: Icon(Icons.person)),
-            IconButton(
-                onPressed: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (context) => AddCart()));
-                },
-                icon: Icon(Icons.add_shopping_cart)),
-            IconButton(
-                onPressed: () {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => MoreScreen()));
-                },
-                icon: Icon(Icons.more_horiz_rounded)),
-          ],
-        ),
-      ),
+      bottomNavigationBar: bottomBar(),
       body: ListView(
         children: [
           Container(
@@ -81,8 +51,10 @@ class UserScreen extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              userOrder(),
-              UserBuyAgain(),
+              userOrder(
+                  Text('Your Oder', style: TextStyle(color: Colors.black))),
+              userOrder(
+                  Text('Buy Again', style: TextStyle(color: Colors.black)))
             ],
           ),
           SizedBox(
@@ -108,18 +80,8 @@ class UserScreen extends StatelessWidget {
                           builder: (context) => AcountScreen()));
                     },
                   )),
-              Container(
-                  width: 165,
-                  height: 40,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      color: Colors.transparent,
-                      border: Border.all(color: Colors.black)),
-                  child: TextButton(
-                    child: Text('Your Wish List',
-                        style: TextStyle(color: Colors.black)),
-                    onPressed: () {},
-                  )),
+              userOrder(
+                  Text('Your Wish List', style: TextStyle(color: Colors.black)))
             ],
           ),
           Container(
@@ -139,20 +101,10 @@ class UserScreen extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Card(
-                  child: Container(
-                    width: 200,
-                    child: Image.network(
-                        'https://cdn.bajajelectronics.com/product/6649-1.png'),
-                  ),
-                ),
-                Card(
-                  child: Container(
-                    width: 200,
-                    child: Image.network(
-                        'https://mobileimages.lowes.com/productimages/93ebbce2-b672-433b-8488-b5b3cec52cfc/65375558.jpg?size=xl'),
-                  ),
-                ),
+                OrderCards(Image.network(
+                    'https://mobileimages.lowes.com/productimages/93ebbce2-b672-433b-8488-b5b3cec52cfc/65375558.jpg?size=xl')),
+                OrderCards(Image.network(
+                    'https://m.media-amazon.com/images/I/31WaGJ9N3YL._AC_SR300,300.jpg')),
                 Card(
                   child: Container(
                     width: 200,
@@ -161,13 +113,8 @@ class UserScreen extends StatelessWidget {
                         'https://www.thesun.co.uk/wp-content/uploads/2023/07/image-634.png'),
                   ),
                 ),
-                Card(
-                  child: Container(
-                    width: 200,
-                    child: Image.network(
-                        'https://imagicbaroda.com/storage/iphone-13-pro-max/13/whatsapp-image-2021-09-18-at-32655-pm.jpeg'),
-                  ),
-                ),
+                OrderCards(Image.network(
+                    'https://rukminim2.flixcart.com/image/850/1000/xif0q/mobile/g/l/3/-original-imagmg6gyu3zemex.jpeg?q=90')),
               ],
             ),
           ),
@@ -196,46 +143,30 @@ class UserScreen extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Card(
-                  child: Column(
-                    children: [
-                      Container(
-                        height: 150,
-                        width: 200,
-                        child: Image.network(
-                            'https://technomediatrade.com/wp-content/uploads/2023/04/white-LAPSTAND-3-jpg.webp'),
-                      ),
-                      Text('Lapdesks')
-                    ],
-                  ),
-                ),
-                Card(
-                  child: Column(
-                    children: [
-                      Container(
-                        width: 200,
-                        height: 150,
-                        child: Image.network(
-                            'https://nypost.com/wp-content/uploads/sites/2/2022/02/outdoor-blink.png'),
-                      ),
-                      Text('speeker')
-                    ],
-                  ),
-                ),
-                Card(
-                  child: Container(
-                    width: 200,
-                    child: Image.network(
-                        'https://cdn.bajajelectronics.com/product/6649-1.png'),
-                  ),
-                ),
-                Card(
-                  child: Container(
-                    width: 200,
-                    child: Image.network(
-                        'https://mobileimages.lowes.com/productimages/93ebbce2-b672-433b-8488-b5b3cec52cfc/65375558.jpg?size=xl'),
-                  ),
-                ),
+                KeepSoppingCard(
+                    Image.network(
+                        'https://technomediatrade.com/wp-content/uploads/2023/04/white-LAPSTAND-3-jpg.webp'),
+                    Text('wwwwww')),
+                KeepSoppingCard(
+                    Image.network(
+                        'https://nypost.com/wp-content/uploads/sites/2/2022/02/outdoor-blink.png'),
+                    Text('speeker')),
+                KeepSoppingCard(
+                    Image.network(
+                        'https://technomediatrade.com/wp-content/uploads/2023/04/white-LAPSTAND-3-jpg.webp'),
+                    Text('wwwwww')),
+                KeepSoppingCard(
+                    Image.network(
+                        'https://nypost.com/wp-content/uploads/sites/2/2022/02/outdoor-blink.png'),
+                    Text('speeker')),
+                KeepSoppingCard(
+                    Image.network(
+                        'https://technomediatrade.com/wp-content/uploads/2023/04/white-LAPSTAND-3-jpg.webp'),
+                    Text('wwwwww')),
+                KeepSoppingCard(
+                    Image.network(
+                        'https://nypost.com/wp-content/uploads/sites/2/2022/02/outdoor-blink.png'),
+                    Text('speeker')),
               ],
             ),
           ),
@@ -244,21 +175,24 @@ class UserScreen extends StatelessWidget {
     );
   }
 
-  Container UserBuyAgain() {
-    return Container(
-        width: 165,
-        height: 40,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(50),
-            color: Colors.transparent,
-            border: Border.all(color: Colors.black)),
-        child: TextButton(
-          child: Text('Buy Again', style: TextStyle(color: Colors.black)),
-          onPressed: () {},
-        ));
+  Card OrderCards(Image) {
+    return Card(
+      child: Container(
+        width: 200,
+        child: Image,
+      ),
+    );
   }
 
-  Container userOrder() {
+  Card KeepSoppingCard(Image, Text) {
+    return Card(
+      child: Column(
+        children: [Container(height: 150, width: 200, child: Image), Text],
+      ),
+    );
+  }
+
+  Container userOrder(Text) {
     return Container(
         width: 165,
         height: 40,
@@ -267,7 +201,7 @@ class UserScreen extends StatelessWidget {
             color: Colors.transparent,
             border: Border.all(color: Colors.black)),
         child: TextButton(
-          child: Text('Your Oder', style: TextStyle(color: Colors.black)),
+          child: Text,
           onPressed: () {},
         ));
   }

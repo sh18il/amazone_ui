@@ -1,5 +1,5 @@
-import 'package:amazone/sceens/add_cart_screen.dart';
-import 'package:amazone/sceens/user_screen.dart';
+import 'package:amazone/botton_Nav_Bar.dart';
+
 import 'package:flutter/material.dart';
 
 class MoreScreen extends StatelessWidget {
@@ -8,52 +8,31 @@ class MoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          backgroundColor: Color.fromARGB(176, 183, 255, 255),
+          automaticallyImplyLeading: false,
+          title: Container(
+            width: double.infinity,
+            child: Container(
+              width: double.infinity,
+              height: 40,
+              decoration:
+                  BoxDecoration(border: Border.all(color: Colors.black)),
+              child: TextField(
+                decoration: InputDecoration(
+                    icon: Icon(Icons.search),
+                    hintText: 'Search Amazone.in',
+                    suffixIcon: Icon(Icons.qr_code_scanner)),
+              ),
+            ),
+          )),
       backgroundColor: Color.fromARGB(176, 183, 255, 255),
-      bottomNavigationBar: BottomAppBar(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: Icon(Icons.home)),
-            IconButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => UserScreen()));
-                },
-                icon: Icon(Icons.person)),
-            IconButton(
-                onPressed: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (context) => AddCart()));
-                },
-                icon: Icon(Icons.add_shopping_cart)),
-            IconButton(
-                onPressed: () {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => MoreScreen()));
-                },
-                icon: Icon(Icons.more_horiz_rounded)),
-          ],
-        ),
-      ),
+      bottomNavigationBar: bottomBar(),
       body: SafeArea(
         child: ListView(
           children: [
             Padding(
               padding: const EdgeInsets.all(12),
-              child: Container(
-                decoration:
-                    BoxDecoration(border: Border.all(color: Colors.black)),
-                child: TextField(
-                  decoration: InputDecoration(
-                      icon: Icon(Icons.search),
-                      hintText: 'Search Amazone.in',
-                      suffixIcon: Icon(Icons.qr_code_scanner)),
-                ),
-              ),
             ),
             Card(
               child: Row(
@@ -102,7 +81,8 @@ class MoreScreen extends StatelessWidget {
                   child: Container(
                     child: Column(
                       children: [
-                        Text('Prime'),
+                        Container(
+                            alignment: Alignment.topLeft, child: Text('Prime')),
                         Container(
                           width: 110,
                           height: 150,
@@ -117,12 +97,15 @@ class MoreScreen extends StatelessWidget {
                   child: Container(
                     child: Column(
                       children: [
-                        Text('Prime'),
+                        Container(
+                            width: 100,
+                            alignment: Alignment.topLeft,
+                            child: Text('Deals And Savings')),
                         Container(
                           width: 110,
-                          height: 150,
+                          height: 135,
                           child: Image.network(
-                              'https://timesofindia.indiatimes.com/photo/101083136/101083136.jpg'),
+                              'https://qph.cf2.quoracdn.net/main-qimg-cb7815cf5022d46bd47ea6d25e256a82-lq'),
                         )
                       ],
                     ),
@@ -132,10 +115,13 @@ class MoreScreen extends StatelessWidget {
                   child: Container(
                     child: Column(
                       children: [
-                        Text('Prime'),
+                        Container(
+                            width: 100,
+                            alignment: Alignment.topLeft,
+                            child: Text('Mobile & Electronic  Devices')),
                         Container(
                           width: 110,
-                          height: 150,
+                          height: 115,
                           child: Image.network(
                               'https://timesofindia.indiatimes.com/photo/101083136/101083136.jpg'),
                         )
@@ -155,10 +141,13 @@ class MoreScreen extends StatelessWidget {
                   child: Container(
                     child: Column(
                       children: [
-                        Text('Prime'),
+                        Container(
+                            width: 100,
+                            alignment: Alignment.topLeft,
+                            child: Text('Fashion & Beauty')),
                         Container(
                           width: 110,
-                          height: 150,
+                          height: 135,
                           child: Image.network(
                               'https://timesofindia.indiatimes.com/photo/101083136/101083136.jpg'),
                         )
@@ -170,10 +159,13 @@ class MoreScreen extends StatelessWidget {
                   child: Container(
                     child: Column(
                       children: [
-                        Text('Prime'),
+                        Container(
+                            width: 100,
+                            alignment: Alignment.topLeft,
+                            child: Text('Groceries & Pet Supplies')),
                         Container(
                           width: 110,
-                          height: 150,
+                          height: 135,
                           child: Image.network(
                               'https://timesofindia.indiatimes.com/photo/101083136/101083136.jpg'),
                         )
@@ -185,10 +177,13 @@ class MoreScreen extends StatelessWidget {
                   child: Container(
                     child: Column(
                       children: [
-                        Text('Prime'),
+                        Container(
+                            width: 100,
+                            alignment: Alignment.topLeft,
+                            child: Text('Health & Personal Care')),
                         Container(
                           width: 110,
-                          height: 150,
+                          height: 135,
                           child: Image.network(
                               'https://timesofindia.indiatimes.com/photo/101083136/101083136.jpg'),
                         )
@@ -208,10 +203,13 @@ class MoreScreen extends StatelessWidget {
                   child: Container(
                     child: Column(
                       children: [
-                        Text('Prime'),
+                        Container(
+                            width: 100,
+                            alignment: Alignment.topLeft,
+                            child: Text('Fashion & Beauty')),
                         Container(
                           width: 110,
-                          height: 150,
+                          height: 135,
                           child: Image.network(
                               'https://timesofindia.indiatimes.com/photo/101083136/101083136.jpg'),
                         )
@@ -223,10 +221,13 @@ class MoreScreen extends StatelessWidget {
                   child: Container(
                     child: Column(
                       children: [
-                        Text('Prime'),
+                        Container(
+                            width: 100,
+                            alignment: Alignment.topLeft,
+                            child: Text('Groceries & Pet Supplies')),
                         Container(
                           width: 110,
-                          height: 150,
+                          height: 135,
                           child: Image.network(
                               'https://timesofindia.indiatimes.com/photo/101083136/101083136.jpg'),
                         )
@@ -238,10 +239,13 @@ class MoreScreen extends StatelessWidget {
                   child: Container(
                     child: Column(
                       children: [
-                        Text('Prime'),
+                        Container(
+                            width: 100,
+                            alignment: Alignment.topLeft,
+                            child: Text('Health & Personal Care')),
                         Container(
                           width: 110,
-                          height: 150,
+                          height: 135,
                           child: Image.network(
                               'https://timesofindia.indiatimes.com/photo/101083136/101083136.jpg'),
                         )
@@ -251,7 +255,6 @@ class MoreScreen extends StatelessWidget {
                 ),
               ],
             ),
-           
           ],
         ),
       ),
