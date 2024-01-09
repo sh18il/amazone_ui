@@ -40,7 +40,7 @@ class AcountScreen extends StatelessWidget {
         ),
       ),
       body: SafeArea(
-        child: Column(
+        child: ListView(
           children: [
             Padding(
               padding: const EdgeInsets.all(12),
@@ -70,8 +70,15 @@ class AcountScreen extends StatelessWidget {
                           decoration: BoxDecoration(
                               border: Border.all(color: Colors.black)),
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Container(
+                                decoration: BoxDecoration(
+                                    border: Border(
+                                        bottom: BorderSide(
+                                            color: Color.fromARGB(
+                                                115, 96, 96, 96)))),
+                                height: 50,
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
@@ -82,11 +89,12 @@ class AcountScreen extends StatelessWidget {
                                 ),
                               ),
                               Container(
+                                height: 50,
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text('Your Order'),
+                                    Text('Subscribe & Save'),
                                     Icon(Icons.arrow_forward_ios_outlined)
                                   ],
                                 ),
@@ -98,113 +106,180 @@ class AcountScreen extends StatelessWidget {
                           decoration: BoxDecoration(
                               border: Border.all(color: Colors.black)),
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Container(
+                                decoration: BoxDecoration(
+                                    border: Border(
+                                        bottom: BorderSide(
+                                            color: Color.fromARGB(
+                                                115, 96, 96, 96)))),
+                                height: 50,
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text('Your Order'),
+                                    Text('Login & security'),
                                     Icon(Icons.arrow_forward_ios_outlined)
                                   ],
                                 ),
                               ),
                               Container(
+                                decoration: BoxDecoration(
+                                    border: Border(
+                                        bottom: BorderSide(
+                                            color: Color.fromARGB(
+                                                115, 96, 96, 96)))),
+                                height: 50,
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text('Your Order'),
+                                    Text('Your Addresses'),
                                     Icon(Icons.arrow_forward_ios_outlined)
                                   ],
                                 ),
                               ),
                               Container(
+                                decoration: BoxDecoration(
+                                    border: Border(
+                                        bottom: BorderSide(
+                                            color: Color.fromARGB(
+                                                115, 96, 96, 96)))),
+                                height: 50,
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text('Your Order'),
+                                    Text('Login with Amazon'),
                                     Icon(Icons.arrow_forward_ios_outlined)
                                   ],
                                 ),
                               ),
                               Container(
+                                decoration: BoxDecoration(
+                                    border: Border(
+                                        bottom: BorderSide(
+                                            color: Color.fromARGB(
+                                                115, 96, 96, 96)))),
+                                height: 50,
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text('Your Order'),
+                                    Text('Content and devices'),
                                     Icon(Icons.arrow_forward_ios_outlined)
                                   ],
                                 ),
                               ),
                               Container(
+                                decoration: BoxDecoration(
+                                    border: Border(
+                                        bottom: BorderSide(
+                                            color: Color.fromARGB(
+                                                115, 96, 96, 96)))),
+                                height: 50,
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text('Your Order'),
+                                    Text('Manage Your Profiles'),
                                     Icon(Icons.arrow_forward_ios_outlined)
                                   ],
                                 ),
                               ),
                               Container(
+                                decoration: BoxDecoration(
+                                    border: Border(
+                                        bottom: BorderSide(
+                                            color: Color.fromARGB(
+                                                115, 96, 96, 96)))),
+                                height: 50,
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text('Your Order'),
+                                    Text('Default Purchase Settings'),
                                     Icon(Icons.arrow_forward_ios_outlined)
                                   ],
                                 ),
                               ),
                               Container(
+                                decoration: BoxDecoration(
+                                    border: Border(
+                                        bottom: BorderSide(
+                                            color: Color.fromARGB(
+                                                115, 96, 96, 96)))),
+                                height: 50,
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text('Your Order'),
+                                    Text('Manage Prime membership'),
                                     Icon(Icons.arrow_forward_ios_outlined)
                                   ],
                                 ),
                               ),
                               Container(
+                                decoration: BoxDecoration(
+                                    border: Border(
+                                        bottom: BorderSide(
+                                            color: Color.fromARGB(
+                                                115, 96, 96, 96)))),
+                                height: 50,
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text('Your Order'),
+                                    Text('Memberships & Subscriptions'),
                                     Icon(Icons.arrow_forward_ios_outlined)
                                   ],
                                 ),
                               ),
                               Container(
+                                decoration: BoxDecoration(
+                                    border: Border(
+                                        bottom: BorderSide(
+                                            color: Color.fromARGB(
+                                                115, 96, 96, 96)))),
+                                height: 50,
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text('Your Order'),
+                                    Text('Manage Your  Seller Account'),
                                     Icon(Icons.arrow_forward_ios_outlined)
                                   ],
                                 ),
                               ),
                               Container(
+                                decoration: BoxDecoration(
+                                    border: Border(
+                                        bottom: BorderSide(
+                                            color: Color.fromARGB(
+                                                115, 96, 96, 96)))),
+                                height: 50,
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text('Your Order'),
+                                    Text('Your Amazon Bussines Account'),
                                     Icon(Icons.arrow_forward_ios_outlined)
                                   ],
                                 ),
                               ),
                               Container(
+                                decoration: BoxDecoration(
+                                    border: Border(
+                                        bottom: BorderSide(
+                                            color: Color.fromARGB(
+                                                115, 96, 96, 96)))),
+                                height: 50,
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text('Your Order'),
+                                    Text('Review Your Purchases'),
                                     Icon(Icons.arrow_forward_ios_outlined)
                                   ],
                                 ),

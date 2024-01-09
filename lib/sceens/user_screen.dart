@@ -54,26 +54,27 @@ class UserScreen extends StatelessWidget {
         children: [
           Container(
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(8.0),
                   child: Text(
                     'Hello, Shibil',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 200),
+                Container(
+                    child: TextButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => AcountScreen()));
+                  },
                   child: Container(
-                      child: IconButton(
-                          onPressed: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => AcountScreen()));
-                          },
-                          icon: Icon(
-                            Icons.person_3_outlined,
-                          ))),
-                )
+                    width: 50,
+                    child: Image.network(
+                        'https://static-00.iconduck.com/assets.00/user-circle-icon-2048x2048-rbk3fbd1.png'),
+                  ),
+                )),
               ],
             ),
           ),
@@ -98,8 +99,14 @@ class UserScreen extends StatelessWidget {
                       color: Colors.transparent,
                       border: Border.all(color: Colors.black)),
                   child: TextButton(
-                    child: Text('Your Account'),
-                    onPressed: () {},
+                    child: Text(
+                      'Your Account',
+                      style: TextStyle(color: Colors.black),
+                    ),
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => AcountScreen()));
+                    },
                   )),
               Container(
                   width: 165,
@@ -109,7 +116,8 @@ class UserScreen extends StatelessWidget {
                       color: Colors.transparent,
                       border: Border.all(color: Colors.black)),
                   child: TextButton(
-                    child: Text('Your Wish List'),
+                    child: Text('Your Wish List',
+                        style: TextStyle(color: Colors.black)),
                     onPressed: () {},
                   )),
             ],
@@ -245,7 +253,7 @@ class UserScreen extends StatelessWidget {
             color: Colors.transparent,
             border: Border.all(color: Colors.black)),
         child: TextButton(
-          child: Text('Buy Again'),
+          child: Text('Buy Again', style: TextStyle(color: Colors.black)),
           onPressed: () {},
         ));
   }
@@ -259,8 +267,8 @@ class UserScreen extends StatelessWidget {
             color: Colors.transparent,
             border: Border.all(color: Colors.black)),
         child: TextButton(
-          child: Text('Your Oder'),
-          onPressed: () { },
+          child: Text('Your Oder', style: TextStyle(color: Colors.black)),
+          onPressed: () {},
         ));
   }
 }
