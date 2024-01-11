@@ -146,7 +146,7 @@ class UserScreen extends StatelessWidget {
                 KeepSoppingCard(
                     Image.network(
                         'https://technomediatrade.com/wp-content/uploads/2023/04/white-LAPSTAND-3-jpg.webp'),
-                    Text('wwwwww')),
+                    Text('Laptop Stand')),
                 KeepSoppingCard(
                     Image.network(
                         'https://nypost.com/wp-content/uploads/sites/2/2022/02/outdoor-blink.png'),
@@ -154,7 +154,7 @@ class UserScreen extends StatelessWidget {
                 KeepSoppingCard(
                     Image.network(
                         'https://technomediatrade.com/wp-content/uploads/2023/04/white-LAPSTAND-3-jpg.webp'),
-                    Text('wwwwww')),
+                    Text('stand')),
                 KeepSoppingCard(
                     Image.network(
                         'https://nypost.com/wp-content/uploads/sites/2/2022/02/outdoor-blink.png'),
@@ -162,11 +162,12 @@ class UserScreen extends StatelessWidget {
                 KeepSoppingCard(
                     Image.network(
                         'https://technomediatrade.com/wp-content/uploads/2023/04/white-LAPSTAND-3-jpg.webp'),
-                    Text('wwwwww')),
+                    Text('lap')),
                 KeepSoppingCard(
-                    Image.network(
-                        'https://nypost.com/wp-content/uploads/sites/2/2022/02/outdoor-blink.png'),
-                    Text('speeker')),
+                  Image.network(
+                      'https://nypost.com/wp-content/uploads/sites/2/2022/02/outdoor-blink.png'),
+                  Text('speeker'),
+                ),
               ],
             ),
           ),
@@ -184,11 +185,14 @@ class UserScreen extends StatelessWidget {
     );
   }
 
-  Card KeepSoppingCard(Image, Text) {
-    return Card(
-      child: Column(
-        children: [Container(height: 150, width: 200, child: Image), Text],
-      ),
+  Column KeepSoppingCard(Image, Text) {
+    return Column(
+      children: [
+        Card(
+          child: Container(height: 150, width: 200, child: Image),
+        ),
+        Text,
+      ],
     );
   }
 

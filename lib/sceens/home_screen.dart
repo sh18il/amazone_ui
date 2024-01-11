@@ -1,8 +1,4 @@
-
-
 import 'package:amazone/botton_Nav_Bar.dart';
-
-
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -171,54 +167,23 @@ class HomeScreen extends StatelessWidget {
                   Container(
                     child: CarouselSlider(
                         items: [
-                          Card(
-                            shadowColor: const Color.fromARGB(255, 5, 5, 5),
-                            surfaceTintColor: Colors.amber,
-                            color: Color.fromARGB(255, 240, 205, 66),
-                            child: Container(
-                              width: 500,
-                              height: 500,
-                              child: Image.network(
-                                'https://i.gadgets360cdn.com/large/amazon-main-banner-1200x675_1696706012955.jpg',
-                              ),
-                            ),
-                          ),
-                          Card(
-                            color: Colors.black,
-                            child: Container(
-                              width: 500,
-                              child: Image.network(
-                                'https://m.media-amazon.com/images/G/31/boat/nirvana/ion/28th/dec/new/1400x800-a._CB586997324_.gif',
-                                width: 500,
-                                height: 300,
-                              ),
-                            ),
-                          ),
-                          Card(
-                            color: const Color.fromARGB(255, 19, 86, 141),
-                            child: Container(
-                              width: 500,
-                              child: Image.network(
-                                'https://m.media-amazon.com/images/G/31/img23/Wireless/Samsung/SamsungM/Cathero/M34/D85723568_INWLD-WLD-Samsung-M34-NewLaunch_catpage_1400x800_7._CB585154596_.jpg',
-                                width: 500,
-                                height: 300,
-                              ),
-                            ),
-                          ),
-                          Card(
-                            color: Colors.pink,
-                            child: Container(
-                              width: 400,
-                              child: Image.network(
-                                'https://m.economictimes.com/thumb/msid-94391185,width-1200,height-900,resizemode-4,imgsize-39134/sl7_electronics_english_600x450.jpg',
-                                width: 500,
-                              ),
-                            ),
-                          ),
+                          HomeImageCarouse(Image.network(
+                              fit: BoxFit.fill,
+                              'https://i.gadgets360cdn.com/large/amazon-main-banner-1200x675_1696706012955.jpg')),
+                          HomeImageCarouse(Image.network(
+                              fit: BoxFit.fill,
+                              'https://m.media-amazon.com/images/G/31/boat/nirvana/ion/28th/dec/new/1400x800-a._CB586997324_.gif')),
+                          HomeImageCarouse(Image.network(
+                              fit: BoxFit.fill,
+                              'https://m.media-amazon.com/images/G/31/img23/Wireless/Samsung/SamsungM/Cathero/M34/D85723568_INWLD-WLD-Samsung-M34-NewLaunch_catpage_1400x800_7._CB585154596_.jpg')),
+                          HomeImageCarouse(Image.network(
+                              fit: BoxFit.fill,
+                              'https://m.economictimes.com/thumb/msid-94391185,width-1200,height-900,resizemode-4,imgsize-39134/sl7_electronics_english_600x450.jpg')),
                         ],
                         options: CarouselOptions(
                           autoPlay: true,
-                          height: 330,
+                          height: 300,
+                          viewportFraction: 1,
                         )),
                   ),
                   SingleChildScrollView(
@@ -344,29 +309,75 @@ class HomeScreen extends StatelessWidget {
                         TextButton(
                           onPressed: () {},
                           child: Container(
-                            width: 40,
-                            child: Image.network(
-                                'https://cdn3.iconfinder.com/data/icons/business-office-11/512/Business_Office_circle_income_sales_increase_earning-512.png'),
+                            width: 100,
+                            child: Row(
+                              children: [
+                                Container(
+                                  width: 40,
+                                  child: Image.network(
+                                      'https://cdn3.iconfinder.com/data/icons/business-office-11/512/Business_Office_circle_income_sales_increase_earning-512.png'),
+                                ),
+                                Text('WIDE')
+                              ],
+                            ),
                           ),
                         ),
                         TextButton(
                           onPressed: () {},
                           child: Container(
-                            width: 40,
-                            child: Image.network(
-                                'https://cdn3.iconfinder.com/data/icons/business-office-11/512/Business_Office_circle_income_sales_increase_earning-512.png'),
+                            width: 100,
+                            child: Row(
+                              children: [
+                                Container(
+                                  width: 40,
+                                  child: Image.network(
+                                      'https://cdn3.iconfinder.com/data/icons/business-office-11/512/Business_Office_circle_income_sales_increase_earning-512.png'),
+                                ),
+                                Text('PAY')
+                              ],
+                            ),
                           ),
                         ),
                         TextButton(
                           onPressed: () {},
                           child: Container(
-                            width: 40,
-                            child: Image.network(
-                                'https://cdn3.iconfinder.com/data/icons/business-office-11/512/Business_Office_circle_income_sales_increase_earning-512.png'),
+                            width: 100,
+                            child: Row(
+                              children: [
+                                Container(
+                                  width: 40,
+                                  child: Image.network(
+                                      'https://cdn3.iconfinder.com/data/icons/business-office-11/512/Business_Office_circle_income_sales_increase_earning-512.png'),
+                                ),
+                                Text('EASY ')
+                              ],
+                            ),
                           ),
                         )
                       ],
                     ),
+                  ),
+                  Container(
+                    child: CarouselSlider(
+                        items: [
+                          HomeImageCarouse(Image.network(
+                              fit: BoxFit.fill,
+                              'https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/a373daa6-fae7-4997-9ac2-9ecf182d9787.jpeg')),
+                          HomeImageCarouse(Image.network(
+                              fit: BoxFit.fill,
+                              'https://m.media-amazon.com/images/G/31/IN-Events/Jan24ARTTeaser1/T2_PC_SL_Unrec._CB585669001_.jpg')),
+                          HomeImageCarouse(Image.network(
+                              fit: BoxFit.fill,
+                              'https://m.media-amazon.com/images/G/31/img21/Wireless/Madhav/JanART24/Teaser2/T2_PC_WL_Unrec._CB586106327_.jpg')),
+                          HomeImageCarouse(Image.network(
+                              fit: BoxFit.fill,
+                              'https://m.media-amazon.com/images/G/31/IN-Events/Jan24ARTTeaser1/T2_PC_CEPC_Unrec._CB585669001_.jpg ')),
+                        ],
+                        options: CarouselOptions(
+                          autoPlay: true,
+                          height: 300,
+                          viewportFraction: 1,
+                        )),
                   )
                 ],
               ),
@@ -374,6 +385,10 @@ class HomeScreen extends StatelessWidget {
           ),
         ));
   }
+
+  Container HomeImageCarouse(Image) {
+    return Container(
+      child: Container(width: double.infinity, child: Image),
+    );
+  }
 }
-
-

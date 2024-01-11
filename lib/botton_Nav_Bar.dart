@@ -29,13 +29,13 @@ class bottomBar extends StatelessWidget {
               icon: Icon(Icons.person)),
           IconButton(
               onPressed: () {
-                Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => carttPage()));
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => carttPage()));
               },
               icon: Icon(Icons.add_shopping_cart)),
           IconButton(
               onPressed: () {
-                Navigator.of(context).pushReplacement(
+                Navigator.of(context).push(
                     MaterialPageRoute(builder: (context) => MoreScreen()));
               },
               icon: Icon(Icons.more_horiz_rounded)),

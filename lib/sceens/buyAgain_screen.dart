@@ -40,8 +40,7 @@ class BuyAgainScreen extends StatelessWidget {
                                 onPressed: () {},
                                 child: Text(
                                   'Filters',
-                                  style: TextStyle(color: Colors.black)
-                                  ,
+                                  style: TextStyle(color: Colors.black),
                                 ))),
                       )
                     ],
@@ -59,148 +58,118 @@ class BuyAgainScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                Row(
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Card(
-                      child: Column(
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
                         children: [
-                          Container(
-                            width: 180,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  width: 120,
-                                  child: Image.network(
-                                      'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
-                                ),
-                                Text('Apple'),
-                                Text('iPhone 13 (128GB) - Midnight'),
-                                Text('₹52,990 M.R.P: ₹59,900 (12% off)'),
-                                Text('Delivery by Amazone'),
-                                ElevatedButton(
-                                    style: ButtonStyle(
-                                        backgroundColor:
-                                            MaterialStatePropertyAll(
-                                                Colors.amber)),
-                                    onPressed: () {},
-                                    child: Text(
-                                      'Add to Cart',
-                                      style: TextStyle(color: Colors.black),
-                                    ))
-                              ],
-                            ),
-                          )
+                          BuyAgainCards(
+                            Image.network(
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
+                          ),
+                          BuyAgainCards(
+                            Image.network(
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
+                          ),
+                          BuyAgainCards(
+                            Image.network(
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
+                          ),
+                          BuyAgainCards(
+                            Image.network(
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
+                          ),
                         ],
                       ),
                     ),
-                    Card(
-                      child: Column(
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
                         children: [
-                          Container(
-                            width: 180,
-                            child: Column(
-                              children: [
-                                Container(
-                                  width: 120,
-                                  child: Image.network(
-                                      'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
-                                ),
-                                Text('Apple'),
-                                Text('iPhone 13 (128GB) - Midnight'),
-                                Text('₹52,990 M.R.P: ₹59,900 (12% off)'),
-                                Text('Delivery by Amazone'),
-                                ElevatedButton(
-                                    style: ButtonStyle(
-                                        backgroundColor:
-                                            MaterialStatePropertyAll(
-                                                Colors.amber)),
-                                    onPressed: () {},
-                                    child: Text(
-                                      'Add to Cart',
-                                      style: TextStyle(color: Colors.black),
-                                    ))
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-                Row(
-                  children: [
-                    Card(
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 180,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  width: 120,
-                                  child: Image.network(
-                                      'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
-                                ),
-                                Text('Apple'),
-                                Text('iPhone 13 (128GB) - Midnight'),
-                                Text('₹52,990 M.R.P: ₹59,900 (12% off)'),
-                                Text('Delivery by Amazone'),
-                                ElevatedButton(
-                                    style: ButtonStyle(
-                                        backgroundColor:
-                                            MaterialStatePropertyAll(
-                                                Colors.amber)),
-                                    onPressed: () {},
-                                    child: Text(
-                                      'Add to Cart',
-                                      style: TextStyle(color: Colors.black),
-                                    ))
-                              ],
-                            ),
-                          )
+                          BuyAgainCards(
+                            Image.network(
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
+                          ),
+                          BuyAgainCards(
+                            Image.network(
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
+                          ),
+                          BuyAgainCards(
+                            Image.network(
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
+                          ),
+                          BuyAgainCards(
+                            Image.network(
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
+                          ),
                         ],
                       ),
                     ),
-                    Card(
-                      child: Column(
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
                         children: [
-                          Container(
-                            width: 180,
-                            child: Column(
-                              children: [
-                                Container(
-                                  width: 120,
-                                  child: Image.network(
-                                      'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
-                                ),
-                                Text('Apple'),
-                                Text('iPhone 13 (128GB) - Midnight'),
-                                Text('₹52,990 M.R.P: ₹59,900 (12% off)'),
-                                Text('Delivery by Amazone'),
-                                ElevatedButton(
-                                    style: ButtonStyle(
-                                        backgroundColor:
-                                            MaterialStatePropertyAll(
-                                                Colors.amber)),
-                                    onPressed: () {},
-                                    child: Text(
-                                      'Add to Cart',
-                                      style: TextStyle(color: Colors.black),
-                                    ))
-                              ],
-                            ),
-                          )
+                          BuyAgainCards(
+                            Image.network(
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
+                          ),
+                          BuyAgainCards(
+                            Image.network(
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
+                          ),
+                          BuyAgainCards(
+                            Image.network(
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
+                          ),
+                          BuyAgainCards(
+                            Image.network(
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
+                          ),
                         ],
                       ),
-                    )
+                    ), 
                   ],
                 )
               ],
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Card BuyAgainCards(Image) {
+    return Card(
+      child: Column(
+        children: [
+          Container(
+            width: 180,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  width: 120,
+                  child: Image,
+                ),
+                Text('Apple'),
+                Text('iPhone 13 (128GB) - Midnight'),
+                Text('₹52,990 M.R.P: ₹59,900 (12% off)'),
+                Text('Delivery by Amazone'),
+                ElevatedButton(
+                    style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStatePropertyAll(Colors.amber)),
+                    onPressed: () {},
+                    child: Text(
+                      'Add to Cart',
+                      style: TextStyle(color: Colors.black),
+                    ))
+              ],
+            ),
+          )
+        ],
       ),
     );
   }
