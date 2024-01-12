@@ -1,4 +1,7 @@
 import 'package:amazone/botton_Nav_Bar.dart';
+import 'package:amazone/sceens/Acount_info.dart';
+import 'package:amazone/sceens/Tapview.dart';
+import 'package:amazone/sceens/buyAgain_screen.dart';
 
 import 'package:flutter/material.dart';
 
@@ -157,6 +160,7 @@ class MoreScreen extends StatelessWidget {
                     Text('Health & Personal Care')),
               ],
             ),
+            BottomFix(),
           ],
         ),
       ),
@@ -177,6 +181,107 @@ class MoreScreen extends StatelessWidget {
             Container(width: 110, height: 100, child: Image)
           ],
         ),
+      ),
+    );
+  }
+}
+
+class BottomFix extends StatelessWidget {
+  const BottomFix({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+        color: Colors.white,
+      ),
+      padding: EdgeInsets.all(20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            width: 70,
+            height: 40,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(7),
+                color: Colors.white,
+                border: Border.all(
+                    color: const Color.fromARGB(255, 153, 153, 153))),
+            child: Center(
+              child: Text(
+                "Orders",
+                style: TextStyle(fontWeight: FontWeight.w600),
+              ),
+            ),
+            // decoration: BoxDecoration(borderRadius: BorderRadius.circular(34),color: Colors.brown),
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          Container(
+            width: 90,
+            height: 40,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(7),
+                color: Colors.white,
+                border: Border.all(
+                    color: const Color.fromARGB(255, 153, 153, 153))),
+            child: Center(
+                child: TextButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => carttPage()));
+                    },
+                    child: Text('Buy Again',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black)))),
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          Container(
+            width: 80,
+            height: 40,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(7),
+                color: Colors.white,
+                border: Border.all(
+                    color: const Color.fromARGB(255, 153, 153, 153))),
+            child: Center(
+                child: TextButton(
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => AcountScreen()));
+                    },
+                    child: Text('Account',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black)))),
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          Container(
+            width: 60,
+            height: 40,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(7),
+                color: Colors.white,
+                border: Border.all(
+                    color: const Color.fromARGB(255, 153, 153, 153))),
+            child: Center(
+              child: Text(
+                "List",
+                style: TextStyle(fontWeight: FontWeight.w600),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 10,
+          ),
+        ],
       ),
     );
   }

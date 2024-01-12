@@ -32,15 +32,25 @@ class BuyAgainScreen extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(right: 10),
                         child: Container(
-                            width: 60,
+                            width: 90,
                             height: 30,
                             decoration: BoxDecoration(
                                 border: Border.all(color: Colors.black)),
                             child: TextButton(
                                 onPressed: () {},
-                                child: Text(
-                                  'Filters',
-                                  style: TextStyle(color: Colors.black),
+                                child: Container(
+                                  child: Row(
+                                    children: [
+                                      Text(
+                                        'Filters',
+                                        style: TextStyle(color: Colors.black),
+                                      ),
+                                      Icon(
+                                        Icons.arrow_drop_down_outlined,
+                                        color: Colors.black,
+                                      )
+                                    ],
+                                  ),
                                 ))),
                       )
                     ],
@@ -129,7 +139,7 @@ class BuyAgainScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                    ), 
+                    ),
                   ],
                 )
               ],
@@ -172,5 +182,14 @@ class BuyAgainScreen extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class KeepShoping extends StatelessWidget {
+  const KeepShoping({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold();
   }
 }

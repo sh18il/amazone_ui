@@ -13,7 +13,6 @@ class HomeScreen extends StatelessWidget {
             backgroundColor: Color.fromARGB(255, 145, 213, 222),
             automaticallyImplyLeading: false,
             title: Container(
-              width: double.infinity,
               child: Container(
                 width: double.infinity,
                 height: 40,
@@ -21,7 +20,9 @@ class HomeScreen extends StatelessWidget {
                     BoxDecoration(border: Border.all(color: Colors.black)),
                 child: TextField(
                   decoration: InputDecoration(
-                      icon: Icon(Icons.search),
+                      filled: true,
+                      fillColor: Colors.white,
+                      prefixIcon: Icon(Icons.search),
                       hintText: 'Search Amazone.in',
                       suffixIcon: Icon(Icons.qr_code_scanner)),
                 ),
@@ -45,9 +46,10 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          'Delivery to Shibil-pallikkal 673636 >',
+                          'Delivery to Shibil-pallikkal 673636 ',
                           style: TextStyle(fontSize: 16),
-                        )
+                        ),
+                        Icon(Icons.arrow_drop_down_outlined)
                       ],
                     ),
                   ),
@@ -181,6 +183,7 @@ class HomeScreen extends StatelessWidget {
                               'https://m.economictimes.com/thumb/msid-94391185,width-1200,height-900,resizemode-4,imgsize-39134/sl7_electronics_english_600x450.jpg')),
                         ],
                         options: CarouselOptions(
+                          aspectRatio: 2,
                           autoPlay: true,
                           height: 300,
                           viewportFraction: 1,

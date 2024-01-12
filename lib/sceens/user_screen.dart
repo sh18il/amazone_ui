@@ -11,8 +11,10 @@ class UserScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 145, 213, 222),
-        leading: Image.network(
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/905px-Amazon_logo.svg.png',
+        leading: Container(
+          child: Image.network(
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/905px-Amazon_logo.svg.png',
+          ),
         ),
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.notifications)),
@@ -41,8 +43,14 @@ class UserScreen extends StatelessWidget {
                   },
                   child: Container(
                     width: 50,
-                    child: Image.network(
-                        'https://static-00.iconduck.com/assets.00/user-circle-icon-2048x2048-rbk3fbd1.png'),
+                    child: Container(
+                      width: 100,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image.network(
+                            'https://static-00.iconduck.com/assets.00/user-circle-icon-2048x2048-rbk3fbd1.png'),
+                      ),
+                    ),
                   ),
                 )),
               ],
@@ -58,14 +66,14 @@ class UserScreen extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: 30,
+            height: 0,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Container(
                   width: 165,
-                  height: 40,
+                  height: 50,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
                       color: Colors.transparent,
@@ -199,7 +207,7 @@ class UserScreen extends StatelessWidget {
   Container userOrder(Text) {
     return Container(
         width: 165,
-        height: 40,
+        height: 50,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(50),
             color: Colors.transparent,

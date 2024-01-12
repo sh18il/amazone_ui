@@ -11,7 +11,7 @@ class carttPage extends StatelessWidget {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor:  Color.fromARGB(255, 145, 213, 222),
+            backgroundColor: Color.fromARGB(255, 145, 213, 222),
             automaticallyImplyLeading: false,
             title: Container(
               width: double.infinity,
@@ -43,7 +43,8 @@ class carttPage extends StatelessWidget {
               ),
             ]),
           ),
-          body: TabBarView(children: [AddCart(), BuyAgainScreen()]),
+          body: TabBarView(
+              children: [AddCart(), BuyAgainScreen(), KeepShoping()]),
         ));
   }
 }
