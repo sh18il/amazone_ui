@@ -1,5 +1,5 @@
 import 'package:amazone/botton_Nav_Bar.dart';
-import 'package:amazone/sceens/Acount_info.dart';
+import 'package:amazone/sceens/acount_info.dart';
 
 import 'package:flutter/material.dart';
 
@@ -10,62 +10,54 @@ class UserScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 145, 213, 222),
-        leading: Container(
-          child: Image.network(
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/905px-Amazon_logo.svg.png',
-          ),
+        backgroundColor: const Color.fromARGB(255, 145, 213, 222),
+        leading: Image.network(
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/905px-Amazon_logo.svg.png',
         ),
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.notifications)),
-          IconButton(onPressed: () {}, icon: Icon(Icons.search))
+          IconButton(onPressed: () {}, icon: const Icon(Icons.notifications)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.search))
         ],
       ),
-      bottomNavigationBar: bottomBar(),
+      bottomNavigationBar: const BottomBar(),
       body: ListView(
         children: [
-          Container(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Hello, Shibil',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text(
+                  'Hello, Shibil',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-                Container(
-                    child: TextButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => AcountScreen()));
-                  },
-                  child: Container(
-                    width: 50,
-                    child: Container(
-                      width: 100,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Image.network(
-                            'https://static-00.iconduck.com/assets.00/user-circle-icon-2048x2048-rbk3fbd1.png'),
-                      ),
-                    ),
-                  ),
-                )),
-              ],
-            ),
+              ),
+              TextButton(
+                onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const AcountScreen()));
+                },
+                child: SizedBox(
+              width: 50,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.network(
+                    'https://static-00.iconduck.com/assets.00/user-circle-icon-2048x2048-rbk3fbd1.png'),
+              ),
+                ),
+              ),
+            ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               userOrder(
-                  Text('Your Oder', style: TextStyle(color: Colors.black))),
+                  const Text('Your Oder', style: TextStyle(color: Colors.black))),
               userOrder(
-                  Text('Buy Again', style: TextStyle(color: Colors.black)))
+                  const Text('Buy Again', style: TextStyle(color: Colors.black)))
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 0,
           ),
           Row(
@@ -79,30 +71,28 @@ class UserScreen extends StatelessWidget {
                       color: Colors.transparent,
                       border: Border.all(color: Colors.black)),
                   child: TextButton(
-                    child: Text(
+                    child: const Text(
                       'Your Account',
                       style: TextStyle(color: Colors.black),
                     ),
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => AcountScreen()));
+                          builder: (context) => const AcountScreen()));
                     },
                   )),
               userOrder(
-                  Text('Your Wish List', style: TextStyle(color: Colors.black)))
+                  const Text('Your Wish List', style: TextStyle(color: Colors.black)))
             ],
           ),
-          Container(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 10),
-                  child: Text('Your Orders'),
-                ),
-                TextButton(onPressed: () {}, child: Text('see all.')),
-              ],
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Padding(
+                padding: EdgeInsets.only(left: 10),
+                child: Text('Your Orders'),
+              ),
+              TextButton(onPressed: () {}, child: const Text('see all.')),
+            ],
           ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -114,7 +104,7 @@ class UserScreen extends StatelessWidget {
                 OrderCards(Image.network(
                     'https://m.media-amazon.com/images/I/31WaGJ9N3YL._AC_SR300,300.jpg')),
                 Card(
-                  child: Container(
+                  child: SizedBox(
                     width: 200,
                     height: 200,
                     child: Image.network(
@@ -126,25 +116,21 @@ class UserScreen extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 10),
-                  child: Text('Keep shopping for'),
-                ),
-                Container(
-                  child: Row(
-                    children: [
-                      TextButton(onPressed: () {}, child: Text('Edit.')),
-                      TextButton(
-                          onPressed: () {}, child: Text('Browing history'))
-                    ],
-                  ),
-                )
-              ],
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Padding(
+                padding: EdgeInsets.only(left: 10),
+                child: Text('Keep shopping for'),
+              ),
+              Row(
+                children: [
+                  TextButton(onPressed: () {}, child: const Text('Edit.')),
+                  TextButton(
+                      onPressed: () {}, child: const Text('Browing history'))
+                ],
+              )
+            ],
           ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -154,27 +140,27 @@ class UserScreen extends StatelessWidget {
                 KeepSoppingCard(
                     Image.network(
                         'https://technomediatrade.com/wp-content/uploads/2023/04/white-LAPSTAND-3-jpg.webp'),
-                    Text('Laptop Stand')),
+                    const  Text('Laptop Stand')),
                 KeepSoppingCard(
                     Image.network(
                         'https://nypost.com/wp-content/uploads/sites/2/2022/02/outdoor-blink.png'),
-                    Text('speeker')),
+                    const Text('speeker')),
                 KeepSoppingCard(
                     Image.network(
                         'https://technomediatrade.com/wp-content/uploads/2023/04/white-LAPSTAND-3-jpg.webp'),
-                    Text('stand')),
+                    const Text('stand')),
                 KeepSoppingCard(
                     Image.network(
                         'https://nypost.com/wp-content/uploads/sites/2/2022/02/outdoor-blink.png'),
-                    Text('speeker')),
+                    const Text('speeker')),
                 KeepSoppingCard(
                     Image.network(
                         'https://technomediatrade.com/wp-content/uploads/2023/04/white-LAPSTAND-3-jpg.webp'),
-                    Text('lap')),
+                    const Text('lap')),
                 KeepSoppingCard(
                   Image.network(
                       'https://nypost.com/wp-content/uploads/sites/2/2022/02/outdoor-blink.png'),
-                  Text('speeker'),
+                  const Text('speeker'),
                 ),
               ],
             ),
@@ -184,27 +170,27 @@ class UserScreen extends StatelessWidget {
     );
   }
 
-  Card OrderCards(Image) {
+  Card OrderCards(dynamic Image) {
     return Card(
-      child: Container(
+      child: SizedBox(
         width: 200,
         child: Image,
       ),
     );
   }
 
-  Column KeepSoppingCard(Image, Text) {
+   Column KeepSoppingCard(dynamic Image, Widget Text) {
     return Column(
       children: [
         Card(
-          child: Container(height: 150, width: 200, child: Image),
+          child: SizedBox(height: 150, width: 200, child: Image),
         ),
         Text,
       ],
     );
   }
 
-  Container userOrder(Text) {
+  Container userOrder(Widget Text) {
     return Container(
         width: 165,
         height: 50,

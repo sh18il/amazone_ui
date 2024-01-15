@@ -1,27 +1,29 @@
-import 'package:amazone/botton_Nav_Bar.dart';
-import 'package:amazone/sceens/Acount_info.dart';
-import 'package:amazone/sceens/Tapview.dart';
-import 'package:amazone/sceens/buyAgain_screen.dart';
+
+
+import 'package:amazone/botton_nav_bar.dart';
+
+import 'package:amazone/sceens/tapview.dart';
+
 
 import 'package:flutter/material.dart';
 
 class MoreScreen extends StatelessWidget {
   const MoreScreen({super.key});
-
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Color.fromARGB(176, 183, 255, 255),
+          backgroundColor: const Color.fromARGB(176, 183, 255, 255),
           automaticallyImplyLeading: false,
-          title: Container(
+          title: SizedBox(
             width: double.infinity,
             child: Container(
               width: double.infinity,
               height: 40,
               decoration:
                   BoxDecoration(border: Border.all(color: Colors.black)),
-              child: TextField(
+              child: const TextField(
                 decoration: InputDecoration(
                     icon: Icon(Icons.search),
                     hintText: 'Search Amazone.in',
@@ -29,259 +31,159 @@ class MoreScreen extends StatelessWidget {
               ),
             ),
           )),
-      backgroundColor: Color.fromARGB(176, 183, 255, 255),
-      bottomNavigationBar: bottomBar(),
+      backgroundColor: const Color.fromARGB(176, 183, 255, 255),
+      bottomNavigationBar: const BottomBar(),
       body: SafeArea(
         child: ListView(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(12),
+            const Padding(
+              padding: EdgeInsets.all(12),
             ),
             Card(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Container(
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Container(
-                          width: 160,
-                          child: Image.network(
-                              'https://amazon-pay.brightspotcdn.com/dims4/default/c8bece4/2147483647/strip/true/crop/823x400+549+0/resize/1440x700!/quality/90/?url=https%3A%2F%2Famazon-k1-prod-pay.s3.us-west-2.amazonaws.com%2Fbrightspot%2F92%2Fe5%2Fcd8c543d52e6e8244f68e1892c0b%2Fwhyamazonpay-banner-cb1542821043.jpg%3Aus'),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text('Amazon Pay'),
-                        ),
-                      ],
-                    ),
+                  Column(
+                    children: [
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      SizedBox(
+                        width: 160,
+                        child: Image.network(
+                            'https://amazon-pay.brightspotcdn.com/dims4/default/c8bece4/2147483647/strip/true/crop/823x400+549+0/resize/1440x700!/quality/90/?url=https%3A%2F%2Famazon-k1-prod-pay.s3.us-west-2.amazonaws.com%2Fbrightspot%2F92%2Fe5%2Fcd8c543d52e6e8244f68e1892c0b%2Fwhyamazonpay-banner-cb1542821043.jpg%3Aus'),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Amazon Pay'),
+                      ),
+                    ],
                   ),
-                  Container(
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Container(
-                          width: 160,
-                          child: Image.network(
-                              'https://exchange4media.gumlet.io/news-photo/113497-big26.jpg?w=400&dpr=2.6'),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text('Amazon miniTV'),
-                        ),
-                      ],
-                    ),
-                  )
+                  Column(
+                    children: [
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      SizedBox(
+                        width: 160,
+                        child: Image.network(
+                            'https://exchange4media.gumlet.io/news-photo/113497-big26.jpg?w=400&dpr=2.6'),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Amazon miniTV'),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 MenuCards(
-                    Image.network(
-                        'https://timesofindia.indiatimes.com/photo/101083136/101083136.jpg'),
-                    Text('Prime')),
+                    
+                        'https://timesofindia.indiatimes.com/photo/101083136/101083136.jpg',
+                    const Text('Prime')),
                 MenuCards(
-                    Image.network(
-                        'https://image.freepik.com/free-vector/crazy-deals-gifts-banner-template_68583-15.jpg'),
-                    Text('Deals and Savings')),
+                   
+                        'https://image.freepik.com/free-vector/crazy-deals-gifts-banner-template_68583-15.jpg',
+                    const Text('Deals and Savings')),
                 MenuCards(
-                    Image.network(
-                        'https://asset20.ckassets.com/blog/wp-content/uploads/sites/5/2020/03/Smart-Electronic-Gadgets-You-Should-Own.jpg'),
-                    Text('Mobile & Electronic  Devices')),
+                   
+                        'https://asset20.ckassets.com/blog/wp-content/uploads/sites/5/2020/03/Smart-Electronic-Gadgets-You-Should-Own.jpg',
+                    const Text('Mobile & Electronic  Devices')),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 MenuCards(
-                    Image.network(
-                        'https://boldoutline.in/wp-content/uploads/2021/10/10.jpg'),
-                    Text('Fashion & Beauty')),
+                  
+                        'https://boldoutline.in/wp-content/uploads/2021/10/10.jpg',
+                    const Text('Fashion & Beauty')),
                 MenuCards(
-                    Image.network(
-                        'https://images-eu.ssl-images-amazon.com/images/G/31/img17/Pantry/SBC/petsupplies_30nov_v2.png'),
-                    Text('Groceries & Pet Supplies')),
+                   
+                        'https://images-eu.ssl-images-amazon.com/images/G/31/img17/Pantry/SBC/petsupplies_30nov_v2.png',
+                    const Text('Groceries & Pet Supplies')),
                 MenuCards(
-                    Image.network(
-                        'https://kitsforacause.com/wp-content/uploads/2022/03/Hygiene-Kit.jpg'),
-                    Text('Health & Personal Care')),
+                   
+                        'https://kitsforacause.com/wp-content/uploads/2022/03/Hygiene-Kit.jpg',
+                    const Text('Health & Personal Care')),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 MenuCards(
-                    Image.network(
-                        'https://sc04.alicdn.com/kf/Hf7107d933deb488eb9ae128deadcf9caj.jpg'),
-                    Text('Home,Furniture')),
+                   
+                        'https://sc04.alicdn.com/kf/Hf7107d933deb488eb9ae128deadcf9caj.jpg',
+                    const Text('Home,Furniture')),
                 MenuCards(
-                    Image.network(
-                        'https://media.istockphoto.com/id/1149727174/vector/headphones-with-microphone-for-music-and-video-games-isolated-on-white-doodle-style.jpg?s=1024x1024&w=is&k=20&c=2b5Mh5ZhNH38HVSlzS7dlaoeJ5F6qOC2X0IW-pYHf-Q='),
-                    Text('music, video and Gaming')),
+                    
+                        'https://media.istockphoto.com/id/1149727174/vector/headphones-with-microphone-for-music-and-video-games-isolated-on-white-doodle-style.jpg?s=1024x1024&w=is&k=20&c=2b5Mh5ZhNH38HVSlzS7dlaoeJ5F6qOC2X0IW-pYHf-Q=',
+                    const Text('music, video and Gaming')),
                 MenuCards(
-                    Image.network(
-                        'https://static.toiimg.com/thumb/msid-104528841,imgsize-30414,width-400,resizemode-4/104528841.jpg'),
-                    Text('Gifting')),
+                   
+                        'https://static.toiimg.com/thumb/msid-104528841,imgsize-30414,width-400,resizemode-4/104528841.jpg',
+                    const Text('Gifting')),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 MenuCards(
-                    Image.network(
-                        'https://boldoutline.in/wp-content/uploads/2021/10/10.jpg'),
-                    Text('Fashion & Beauty')),
+                    
+                        'https://boldoutline.in/wp-content/uploads/2021/10/10.jpg',
+                    const Text('Fashion & Beauty')),
                 MenuCards(
-                    Image.network(
-                        'https://images-eu.ssl-images-amazon.com/images/G/31/img17/Pantry/SBC/petsupplies_30nov_v2.png'),
-                    Text('Groceries & Pet Supplies')),
+                   
+                        'https://images-eu.ssl-images-amazon.com/images/G/31/img17/Pantry/SBC/petsupplies_30nov_v2.png',
+                    const Text('Groceries & Pet Supplies')),
                 MenuCards(
-                    Image.network(
-                        'https://kitsforacause.com/wp-content/uploads/2022/03/Hygiene-Kit.jpg'),
-                    Text('Health & Personal Care')),
+                   
+                        'https://kitsforacause.com/wp-content/uploads/2022/03/Hygiene-Kit.jpg',
+                    const Text('Health & Personal Care')),
               ],
             ),
-            BottomFix(),
+            const BottomFix(),
           ],
         ),
       ),
     );
   }
 
-  Card MenuCards(Image, Text) {
+  Card MenuCards(String url,Widget Text) {
     return Card(
-      child: Container(
+
+      child: SizedBox(
+
         width: 120,
         height: 160,
         child: Column(
           children: [
+            
             Text,
-            SizedBox(
+             const SizedBox(
               height: 20,
             ),
-            Container(width: 110, height: 100, child: Image)
+            SizedBox(width: 110, height: 100,
+             child: Image.network(
+              url))
           ],
         ),
-      ),
-    );
-  }
-}
-
-class BottomFix extends StatelessWidget {
-  const BottomFix({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
-        color: Colors.white,
-      ),
-      padding: EdgeInsets.all(20),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            width: 70,
-            height: 40,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(7),
-                color: Colors.white,
-                border: Border.all(
-                    color: const Color.fromARGB(255, 153, 153, 153))),
-            child: Center(
-              child: Text(
-                "Orders",
-                style: TextStyle(fontWeight: FontWeight.w600),
-              ),
-            ),
-            // decoration: BoxDecoration(borderRadius: BorderRadius.circular(34),color: Colors.brown),
-          ),
-          SizedBox(
-            width: 10,
-          ),
-          Container(
-            width: 90,
-            height: 40,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(7),
-                color: Colors.white,
-                border: Border.all(
-                    color: const Color.fromARGB(255, 153, 153, 153))),
-            child: Center(
-                child: TextButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => carttPage()));
-                    },
-                    child: Text('Buy Again',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            color: Colors.black)))),
-          ),
-          SizedBox(
-            width: 10,
-          ),
-          Container(
-            width: 80,
-            height: 40,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(7),
-                color: Colors.white,
-                border: Border.all(
-                    color: const Color.fromARGB(255, 153, 153, 153))),
-            child: Center(
-                child: TextButton(
-                    onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => AcountScreen()));
-                    },
-                    child: Text('Account',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            color: Colors.black)))),
-          ),
-          SizedBox(
-            width: 10,
-          ),
-          Container(
-            width: 60,
-            height: 40,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(7),
-                color: Colors.white,
-                border: Border.all(
-                    color: const Color.fromARGB(255, 153, 153, 153))),
-            child: Center(
-              child: Text(
-                "List",
-                style: TextStyle(fontWeight: FontWeight.w600),
-              ),
-            ),
-          ),
-          SizedBox(
-            width: 10,
-          ),
-        ],
       ),
     );
   }

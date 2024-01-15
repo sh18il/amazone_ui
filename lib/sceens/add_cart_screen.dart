@@ -8,19 +8,19 @@ class AddCart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: bottomBar(),
+      bottomNavigationBar: const BottomBar(),
       body: SafeArea(
         child: ListView(
           children: [
             Column(
               children: [
                 Container(
-                  color: Color.fromARGB(255, 165, 220, 228),
+                  color: const Color.fromARGB(255, 165, 220, 228),
                   height: 50,
-                  child: Row(
+                  child: const Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Icon(
                           Icons.location_on_outlined,
                         ),
@@ -38,8 +38,8 @@ class AddCart extends StatelessWidget {
               children: [
                 Container(
                   alignment: Alignment.topLeft,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: Column(
                       children: [
                         Text(
@@ -52,120 +52,57 @@ class AddCart extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Row(
+                const Row(
                   children: [
                     Icon(Icons.verified),
                     Text('your Order is eligible for FREE Delivery .')
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
-                Container(
+                SizedBox(
                   width: 370,
                   height: 50,
                   child: ElevatedButton(
-                    style: ButtonStyle(
+                    style: const ButtonStyle(
                         backgroundColor:
                             MaterialStatePropertyAll(Colors.amber)),
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       'Proceed to Buy (2 items)',
                       style: TextStyle(color: Colors.black),
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
                   children: [
-                    Container(
-                      child: Checkbox(
-                        value: false,
-                        onChanged: (value) {},
-                      ),
+                    Checkbox(
+                      value: false,
+                      onChanged: (value) {},
                     ),
-                    Container(
-                        child: Text('Send as a gift. Include Custom message'))
+                    const Text('Send as a gift. Include Custom message')
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 05,
                 ),
                 Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       border: Border(top: BorderSide(color: Colors.black))),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
               ],
             ),
-            Container(
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Image.network(
-                      "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71yzJoE7WlL._AC_UF1000,1000_QL80_.jpg",
-                      height: 180,
-                    ),
-                  ),
-                  const Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Apple Iphone 14 Pro(256 GB)-',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        'Deep Purple',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text(
-                        "1,19,999",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text(
-                          "Eligible for FREE Shipping",
-                        ),
-                      ),
-                      Text(
-                        "Color : Deep Purple",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        "Size : 256 GB",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text(
-                        "rs20 cashback applied.",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.green),
-                      ),
-                      Text(
-                        "Buy with other items in cart.",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.green),
-                      ),
-                    ],
-                  )
-                ],
-              ),
-            ),
+            const TextPhoneSide(),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
@@ -220,7 +157,6 @@ class AddCart extends StatelessWidget {
                   ),
                   Container(
                     width: 60,
-                    height: 40,
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: const Color.fromARGB(255, 195, 192, 192)),
@@ -281,7 +217,7 @@ class AddCart extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
           ],

@@ -8,57 +8,53 @@ class BuyAgainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: bottomBar(),
+      bottomNavigationBar: const BottomBar(),
       body: SafeArea(
         child: ListView(
           children: [
             Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'Buy Again',
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
-                        ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        'Buy Again',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 10),
-                        child: Container(
-                            width: 90,
-                            height: 30,
-                            decoration: BoxDecoration(
-                                border: Border.all(color: Colors.black)),
-                            child: TextButton(
-                                onPressed: () {},
-                                child: Container(
-                                  child: Row(
-                                    children: [
-                                      Text(
-                                        'Filters',
-                                        style: TextStyle(color: Colors.black),
-                                      ),
-                                      Icon(
-                                        Icons.arrow_drop_down_outlined,
-                                        color: Colors.black,
-                                      )
-                                    ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 10),
+                      child: Container(
+                          width: 90,
+                          height: 30,
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black)),
+                          child: TextButton(
+                              onPressed: () {},
+                              child: const Row(
+                                children: [
+                                  Text(
+                                    'Filters',
+                                    style: TextStyle(color: Colors.black),
                                   ),
-                                ))),
-                      )
-                    ],
-                  ),
+                                  Icon(
+                                    Icons.arrow_drop_down_outlined,
+                                    color: Colors.black,
+                                  )
+                                ],
+                              ))),
+                    )
+                  ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: Container(
+                const Padding(
+                  padding: EdgeInsets.all(10),
+                  child: SizedBox(
                     height: 35,
                     child: TextField(
                       decoration: InputDecoration(
@@ -154,25 +150,25 @@ class BuyAgainScreen extends StatelessWidget {
     return Card(
       child: Column(
         children: [
-          Container(
+          SizedBox(
             width: 180,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
+                SizedBox(
                   width: 120,
                   child: Image,
                 ),
-                Text('Apple'),
-                Text('iPhone 13 (128GB) - Midnight'),
-                Text('₹52,990 M.R.P: ₹59,900 (12% off)'),
-                Text('Delivery by Amazone'),
+                const Text('Apple'),
+                const Text('iPhone 13 (128GB) - Midnight'),
+                const Text('₹52,990 M.R.P: ₹59,900 (12% off)'),
+                const Text('Delivery by Amazone'),
                 ElevatedButton(
-                    style: ButtonStyle(
+                    style: const ButtonStyle(
                         backgroundColor:
                             MaterialStatePropertyAll(Colors.amber)),
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       'Add to Cart',
                       style: TextStyle(color: Colors.black),
                     ))
@@ -190,6 +186,7 @@ class KeepShoping extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Scaffold();
+    
   }
 }

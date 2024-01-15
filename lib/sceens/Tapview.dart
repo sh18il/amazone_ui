@@ -1,9 +1,10 @@
+import 'package:amazone/sceens/acount_info.dart';
 import 'package:amazone/sceens/add_cart_screen.dart';
-import 'package:amazone/sceens/buyAgain_screen.dart';
+import 'package:amazone/sceens/buyagain_screen.dart';
 import 'package:flutter/material.dart';
 
-class carttPage extends StatelessWidget {
-  const carttPage({super.key});
+class CarttPage extends StatelessWidget {
+  const CarttPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,16 +12,16 @@ class carttPage extends StatelessWidget {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Color.fromARGB(255, 145, 213, 222),
+            backgroundColor: const Color.fromARGB(255, 145, 213, 222),
             automaticallyImplyLeading: false,
-            title: Container(
+            title: SizedBox(
               width: double.infinity,
               child: Container(
                 width: double.infinity,
                 height: 40,
                 decoration:
                     BoxDecoration(border: Border.all(color: Colors.black)),
-                child: TextField(
+                child: const TextField(
                   decoration: InputDecoration(
                       icon: Icon(Icons.search),
                       hintText: 'Search Amazone.in',
@@ -28,7 +29,7 @@ class carttPage extends StatelessWidget {
                 ),
               ),
             ),
-            bottom: TabBar(tabs: [
+            bottom: const TabBar(tabs: [
               Text(
                 'Cart',
                 style: TextStyle(color: Colors.black),
@@ -43,8 +44,109 @@ class carttPage extends StatelessWidget {
               ),
             ]),
           ),
-          body: TabBarView(
+          body: const TabBarView(
               children: [AddCart(), BuyAgainScreen(), KeepShoping()]),
         ));
+  }
+  
+}
+class BottomFix extends StatelessWidget {
+  const BottomFix({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+        color: Colors.white,
+      ),
+      padding: const EdgeInsets.all(20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            width: 70,
+            height: 40,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(7),
+                color: Colors.white,
+                border: Border.all(
+                    color: const Color.fromARGB(255, 153, 153, 153))),
+            child: const Center(
+              child: Text(
+                "Orders",
+                style: TextStyle(fontWeight: FontWeight.w600),
+              ),
+            ),
+            
+          ),
+          const SizedBox(
+            width: 10,
+          ),
+          Container(
+            width: 90,
+            height: 40,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(7),
+                color: Colors.white,
+                border: Border.all(
+                    color: const Color.fromARGB(255, 153, 153, 153))),
+            child: Center(
+                child: TextButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => const CarttPage()));
+                    },
+                    child: const Text('Buy Again',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black)))),
+          ),
+          const SizedBox(
+            width: 10,
+          ),
+          Container(
+            width: 80,
+            height: 40,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(7),
+                color: Colors.white,
+                border: Border.all(
+                    color: const Color.fromARGB(255, 153, 153, 153))),
+            child: Center(
+                child: TextButton(
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const AcountScreen()));
+                    },
+                    child: const Text('Account',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black)))),
+          ),
+          const SizedBox(
+            width: 10,
+          ),
+          Container(
+            width: 60,
+            height: 40,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(7),
+                color: Colors.white,
+                border: Border.all(
+                    color: const Color.fromARGB(255, 153, 153, 153))),
+            child: const Center(
+              child: Text(
+                "List",
+                style: TextStyle(fontWeight: FontWeight.w600),
+              ),
+            ),
+          ),
+          const SizedBox(
+            width: 10,
+          ),
+        ],
+      ),
+    );
   }
 }
