@@ -84,15 +84,15 @@ class MoreScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                MenuCards(
+                menuCards(
                     
                         'https://timesofindia.indiatimes.com/photo/101083136/101083136.jpg',
                     const Text('Prime')),
-                MenuCards(
+                menuCards(
                    
                         'https://image.freepik.com/free-vector/crazy-deals-gifts-banner-template_68583-15.jpg',
                     const Text('Deals and Savings')),
-                MenuCards(
+                menuCards(
                    
                         'https://asset20.ckassets.com/blog/wp-content/uploads/sites/5/2020/03/Smart-Electronic-Gadgets-You-Should-Own.jpg',
                     const Text('Mobile & Electronic  Devices')),
@@ -104,15 +104,15 @@ class MoreScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                MenuCards(
+                menuCards(
                   
                         'https://boldoutline.in/wp-content/uploads/2021/10/10.jpg',
                     const Text('Fashion & Beauty')),
-                MenuCards(
+                menuCards(
                    
                         'https://images-eu.ssl-images-amazon.com/images/G/31/img17/Pantry/SBC/petsupplies_30nov_v2.png',
                     const Text('Groceries & Pet Supplies')),
-                MenuCards(
+                menuCards(
                    
                         'https://kitsforacause.com/wp-content/uploads/2022/03/Hygiene-Kit.jpg',
                     const Text('Health & Personal Care')),
@@ -124,15 +124,15 @@ class MoreScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                MenuCards(
+                menuCards(
                    
                         'https://sc04.alicdn.com/kf/Hf7107d933deb488eb9ae128deadcf9caj.jpg',
                     const Text('Home,Furniture')),
-                MenuCards(
+                menuCards(
                     
                         'https://media.istockphoto.com/id/1149727174/vector/headphones-with-microphone-for-music-and-video-games-isolated-on-white-doodle-style.jpg?s=1024x1024&w=is&k=20&c=2b5Mh5ZhNH38HVSlzS7dlaoeJ5F6qOC2X0IW-pYHf-Q=',
                     const Text('music, video and Gaming')),
-                MenuCards(
+                menuCards(
                    
                         'https://static.toiimg.com/thumb/msid-104528841,imgsize-30414,width-400,resizemode-4/104528841.jpg',
                     const Text('Gifting')),
@@ -144,15 +144,15 @@ class MoreScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                MenuCards(
+                menuCards(
                     
                         'https://boldoutline.in/wp-content/uploads/2021/10/10.jpg',
                     const Text('Fashion & Beauty')),
-                MenuCards(
+                menuCards(
                    
                         'https://images-eu.ssl-images-amazon.com/images/G/31/img17/Pantry/SBC/petsupplies_30nov_v2.png',
                     const Text('Groceries & Pet Supplies')),
-                MenuCards(
+                menuCards(
                    
                         'https://kitsforacause.com/wp-content/uploads/2022/03/Hygiene-Kit.jpg',
                     const Text('Health & Personal Care')),
@@ -165,7 +165,7 @@ class MoreScreen extends StatelessWidget {
     );
   }
 
-  Card MenuCards(String url,Widget Text) {
+  Card menuCards(String url,Widget textwidget) {
     return Card(
 
       child: SizedBox(
@@ -175,7 +175,7 @@ class MoreScreen extends StatelessWidget {
         child: Column(
           children: [
             
-            Text,
+            textwidget,
              const SizedBox(
               height: 20,
             ),

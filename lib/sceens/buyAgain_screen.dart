@@ -71,44 +71,21 @@ class BuyAgainScreen extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         children: [
-                          BuyAgainCards(
-                            Image.network(
-                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
+                          buyAgainCards(
+                            
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg',
                           ),
-                          BuyAgainCards(
-                            Image.network(
-                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
+                          buyAgainCards(
+                     
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg',
                           ),
-                          BuyAgainCards(
-                            Image.network(
-                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
+                          buyAgainCards(
+                        
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg',
                           ),
-                          BuyAgainCards(
-                            Image.network(
-                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: [
-                          BuyAgainCards(
-                            Image.network(
-                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
-                          ),
-                          BuyAgainCards(
-                            Image.network(
-                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
-                          ),
-                          BuyAgainCards(
-                            Image.network(
-                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
-                          ),
-                          BuyAgainCards(
-                            Image.network(
-                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
+                          buyAgainCards(
+                           
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg',
                           ),
                         ],
                       ),
@@ -117,21 +94,44 @@ class BuyAgainScreen extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         children: [
-                          BuyAgainCards(
-                            Image.network(
-                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
+                          buyAgainCards(
+                            
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg',
                           ),
-                          BuyAgainCards(
-                            Image.network(
-                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
+                          buyAgainCards(
+                     
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg',
                           ),
-                          BuyAgainCards(
-                            Image.network(
-                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
+                          buyAgainCards(
+                        
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg',
                           ),
-                          BuyAgainCards(
-                            Image.network(
-                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg'),
+                          buyAgainCards(
+                           
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg',
+                          ),
+                        ],
+                      ),
+                    ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          buyAgainCards(
+                            
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg',
+                          ),
+                          buyAgainCards(
+                     
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg',
+                          ),
+                          buyAgainCards(
+                        
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg',
+                          ),
+                          buyAgainCards(
+                           
+                                'https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY327_FMwebp_QL65_.jpg',
                           ),
                         ],
                       ),
@@ -146,7 +146,7 @@ class BuyAgainScreen extends StatelessWidget {
     );
   }
 
-  Card BuyAgainCards(Image) {
+  Card buyAgainCards(String url) {
     return Card(
       child: Column(
         children: [
@@ -157,7 +157,7 @@ class BuyAgainScreen extends StatelessWidget {
               children: [
                 SizedBox(
                   width: 120,
-                  child: Image,
+                  child: Image.network(url),
                 ),
                 const Text('Apple'),
                 const Text('iPhone 13 (128GB) - Midnight'),

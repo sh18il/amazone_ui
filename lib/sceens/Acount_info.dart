@@ -119,7 +119,7 @@ class AcountScreen extends StatelessWidget {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              AcountSettings(const Padding(
+                              acountSettings(const Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Text(
                                   'Login & security',
@@ -128,7 +128,7 @@ class AcountScreen extends StatelessWidget {
                                       fontWeight: FontWeight.w500),
                                 ),
                               )),
-                              AcountSettings(const Padding(
+                              acountSettings(const Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Text(
                                   'Your Addresses',
@@ -137,7 +137,7 @@ class AcountScreen extends StatelessWidget {
                                       fontWeight: FontWeight.w500),
                                 ),
                               )),
-                              AcountSettings(const Padding(
+                              acountSettings(const Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Text(
                                   'Login with Amazon',
@@ -146,7 +146,7 @@ class AcountScreen extends StatelessWidget {
                                       fontWeight: FontWeight.w500),
                                 ),
                               )),
-                              AcountSettings(const Padding(
+                              acountSettings(const Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Text(
                                   'Content and devices',
@@ -155,7 +155,7 @@ class AcountScreen extends StatelessWidget {
                                       fontWeight: FontWeight.w500),
                                 ),
                               )),
-                              AcountSettings(const Padding(
+                              acountSettings(const Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Text(
                                   'Manage Your Profiles',
@@ -164,7 +164,7 @@ class AcountScreen extends StatelessWidget {
                                       fontWeight: FontWeight.w500),
                                 ),
                               )),
-                              AcountSettings(const Padding(
+                              acountSettings(const Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Text(
                                   'Default Purchase Settings',
@@ -173,7 +173,7 @@ class AcountScreen extends StatelessWidget {
                                       fontWeight: FontWeight.w500),
                                 ),
                               )),
-                              AcountSettings(const Padding(
+                              acountSettings(const Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Text(
                                   'Manage Prime membership',
@@ -182,7 +182,7 @@ class AcountScreen extends StatelessWidget {
                                       fontWeight: FontWeight.w500),
                                 ),
                               )),
-                              AcountSettings(const Padding(
+                              acountSettings(const Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Text(
                                   'Memberships & Subscriptions',
@@ -191,7 +191,7 @@ class AcountScreen extends StatelessWidget {
                                       fontWeight: FontWeight.w500),
                                 ),
                               )),
-                              AcountSettings(const Padding(
+                              acountSettings(const Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Text(
                                   'Manage Your  Seller Account',
@@ -200,7 +200,7 @@ class AcountScreen extends StatelessWidget {
                                       fontWeight: FontWeight.w500),
                                 ),
                               )),
-                              AcountSettings(const Padding(
+                              acountSettings(const Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Text(
                                   'Your Amazon Bussines Account',
@@ -209,7 +209,7 @@ class AcountScreen extends StatelessWidget {
                                       fontWeight: FontWeight.w500),
                                 ),
                               )),
-                              AcountSettings(const Padding(
+                              acountSettings(const Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Text(
                                   'Review Your Purchases',
@@ -232,7 +232,7 @@ class AcountScreen extends StatelessWidget {
   }
 
  
-  Container AcountSettings(Text) {
+  Container acountSettings(Widget textwidget) {
     return Container(
       decoration: const BoxDecoration(
           border: Border(
@@ -240,7 +240,7 @@ class AcountScreen extends StatelessWidget {
       height: 60,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [Text, const Icon(Icons.arrow_forward_ios_outlined)],
+        children: [textwidget, const Icon(Icons.arrow_forward_ios_outlined)],
       ),
     );
   }

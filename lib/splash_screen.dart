@@ -11,7 +11,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    GotoLogin();
+    gotoLogin();
     super.initState();
   }
 
@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 
-  Future<void> GotoLogin() async {
+  Future<void> gotoLogin() async {
     await Future.delayed(const Duration(seconds: 3));
 
     Navigator.of(context).pushReplacement(
